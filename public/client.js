@@ -9,7 +9,9 @@ const cb = payload => {
 }
 ​
 socket.on('new-data', cb);
-​
+
+
+
 ​
 
 

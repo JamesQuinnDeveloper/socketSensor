@@ -21,17 +21,16 @@ io.on('connection',function(socket){
 
 const readSensor = () => {
 	
-
- 
 function readTemp () {
 	//var rpiDhtSensor = require('rpi-dht-sensor');
 	//var dht = new rpiDhtSensor.DHT11(4);
 	//var readout = dht.read();
+	
 
 let temp = '50';
 let humid = '60';
 }
-	const temp = readTemp();
+	const temp = readTemp(temp);
 ​
 	io.emit('new-data', {
 		temp

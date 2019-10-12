@@ -26,17 +26,15 @@ function readTemp () {
 	//var dht = new rpiDhtSensor.DHT11(4);
 	//var readout = dht.read();
 	
+let temp = 50;
+let humid = 60;
 
-let temp = '50';
-let humid = '60';
+io.emit('new-data', {
+	temp,
+	humid
+})
 }
-	const temp = readTemp(temp);
-​
-	io.emit('new-data', {
-		temp
-		//humid
-	})
 }
 
 
-setInteval(readSensor,2000);
+setInterval(readSensor,2000);

@@ -1,0 +1,23 @@
+{
+  "name": "socketsensor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesQuinnDeveloper/socketSensor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesQuinnDeveloper/socketSensor/issues"
+  },
+  "homepage": "https://github.com/JamesQuinnDeveloper/socketSensor#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}

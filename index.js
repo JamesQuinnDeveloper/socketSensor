@@ -20,12 +20,25 @@ io.on('connection',function(socket){
 
 
 const readSensor = () => {
-	// read sensor data here ***
+	
+var rpiDhtSensor = require('rpi-dht-sensor');
+ var dht = new rpiDhtSensor.DHT11(4);
+ 
+function readTemp () {
+var readout = dht.read();
+
+readout.temperature.toFixed(2).value = temp;
+readout.humidity.toFixed(2).value = humid;
+
+
+
 	const temp = readTemp();
 ​
 	io.emit('new-data', {
-		temp
+		temp,
+		humid
 	})
 }
+}
 
-setTimeout(readSensor, 2000);
+setInteval(readSensor,2000);

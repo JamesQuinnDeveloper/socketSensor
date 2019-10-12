@@ -31,7 +31,7 @@ function readTemp () {
 let temp = '50';
 let humid = '60';
 }
-	const temp = readTemp(temp);
+	const temp = readTemp();
 ​
 	io.emit('new-data', {
 		temp

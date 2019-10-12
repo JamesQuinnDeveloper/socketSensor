@@ -27,8 +27,11 @@ var rpiDhtSensor = require('rpi-dht-sensor');
 function readTemp () {
 var readout = dht.read();
 
-readout.temperature.toFixed(2).value = temp;
-readout.humidity.toFixed(2).value = humid;
+var temp;
+var humid;
+
+temp = readout.temperature.toFixed(2).value;
+ humid = readout.humidity.toFixed(2).value;
 
 
 
